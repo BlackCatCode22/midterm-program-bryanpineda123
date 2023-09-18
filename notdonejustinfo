@@ -1,0 +1,79 @@
+#include <iostream>
+
+using namespace std;
+
+class animalNode
+{
+public:
+    string ArrivalDate;
+    string Name;
+    string Habitat;
+    string Gender;
+    string FurColor;
+    int Age;
+    double Weight;
+
+
+    animalNode* newNext;
+    animalNode* temp;
+    animalNode* previousNode;
+};
+
+void printLinkedList(animalNode*n)
+{
+    while(n!=NULL)
+    {
+        cout << n -> Name << endl;
+        n = n -> newNext;
+    }
+}
+
+int main()
+{
+
+    animalNode* bears = new animalNode();
+    animalNode* lions = new animalNode();
+    animalNode* tigers = new animalNode();
+    animalNode* hyenas = new animalNode();
+
+    bears -> Name = "Edward the Bear";
+    bears -> newNext = lions;
+
+    lions -> Name = "Lion Lover 300";
+    lions -> newNext = tigers;
+
+    tigers -> Name = "Tiger the Tiger";
+    tigers -> newNext = hyenas;
+
+    hyenas -> Name = "Hyena Bro";
+    hyenas -> newNext = NULL;
+
+    printLinkedList(bears);
+
+
+    if(num1 > num2)
+    {
+        if (num1 > num3)
+        {
+            largest = num1;
+        }
+        else
+        {
+            largest = num3;
+        }
+    }
+    else
+    {
+        if (num2 < num3)
+        {
+            largest = num3;
+        }
+        else
+        {
+            largest = num2;
+        }
+    }
+
+
+    return 0;
+}
